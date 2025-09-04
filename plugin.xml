@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="com.appodeal.plugin" version="3.3.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="com.appodeal.plugin" version="3.0.5" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>Appodeal Plugin</name>
   <description>Appodeal Plugin</description>
   <author>Appodeal</author>
@@ -292,18 +292,18 @@
     	<framework src="src/android/dependency_fix.gradle" custom="true" type="gradleReference" />
     	<source-file src="src/android/gradle.properties" target-dir="../gradle.properties" />
     	
-    	<!-- Appodeal SDK 3.3.0 - Updated for modern Android compatibility -->
-        <source-file src="libs/Android/appodeal-3.3.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/appodeal-banner-view-3.3.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/applovin-12.6.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/chartboost-9.7.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/inmobi-10.7.4.jar" target-dir="libs" />
-        <source-file src="libs/Android/ogury-5.6.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/picasso-2.8.0.jar" target-dir="libs" />
+    	<!-- Appodeal SDK 2.1.11 - Working version (matches actual JAR files) -->
+        <source-file src="libs/Android/appodeal-2.1.11.jar" target-dir="libs" />
+        <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
+        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
+        <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="libs" />
+        <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" />
         <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="libs" />
-        <source-file src="libs/Android/unity_ads-4.12.2.jar" target-dir="libs" />
-        <source-file src="libs/Android/yandex-metrica-6.4.0.jar" target-dir="libs" />
-    	<source-file src="libs/Android/startapp-4.11.5.jar" target-dir="libs" />
+        <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="libs" />
+    	<source-file src="libs/Android/startapp-3.6.7.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_alphab.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_appwallext.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_mvjscommon.jar" target-dir="libs" />
