@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.mobvista.msdk.reward'
     compileSdkVersion 35
     buildToolsVersion "35.0.0"
     
