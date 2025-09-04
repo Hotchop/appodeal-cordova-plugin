@@ -3,6 +3,8 @@ configurations.all {
     resolutionStrategy {
         // Force consistent versions for Google Play Services
         force 'com.google.android.gms:play-services-ads:22.5.0'
+        force 'com.google.android.gms:play-services-ads-lite:22.5.0'
+        force 'com.google.android.gms:play-services-ads-base:22.5.0'
         force 'com.google.android.gms:play-services-basement:18.2.0'
         force 'com.google.android.gms:play-services-base:18.2.0'
         force 'com.google.android.gms:play-services-tasks:18.0.2'
@@ -24,6 +26,7 @@ configurations.all {
                     switch (details.requested.name) {
                         case 'play-services-ads':
                         case 'play-services-ads-lite':
+                        case 'play-services-ads-base':
                             details.useVersion '22.5.0'
                             break
                         case 'play-services-basement':
