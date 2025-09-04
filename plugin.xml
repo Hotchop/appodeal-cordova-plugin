@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="com.appodeal.plugin" version="3.0.5" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="com.appodeal.plugin" version="3.3.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>Appodeal Plugin</name>
   <description>Appodeal Plugin</description>
   <author>Appodeal</author>
@@ -277,21 +277,33 @@
         
         </config-file>
         
-        <framework src="com.google.android.gms:play-services-ads:10+" />
+        <framework src="com.google.android.gms:play-services-ads:22.6.0" />
+		<framework src="com.google.android.gms:play-services-location:21.0.1" />
+		<framework src="com.google.android.gms:play-services-basement:18.2.0" />
+		
+		<!-- AndroidX Dependencies -->
+		<framework src="androidx.legacy:legacy-support-v4:1.0.0" />
+		<framework src="androidx.appcompat:appcompat:1.6.1" />
+		<framework src="androidx.recyclerview:recyclerview:1.3.2" />
+		<framework src="androidx.core:core:1.12.0" />
+		<framework src="androidx.annotation:annotation:1.7.1" />
 
         <source-file src="src/android/AppodealPlugin.java" target-dir="src/com/appodeal/plugin" />
     	<framework src="src/android/dependency_fix.gradle" custom="true" type="gradleReference" />
-        <source-file src="libs/Android/appodeal-2.1.11.jar" target-dir="libs" />
-        <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
-        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
-        <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="libs" />
-        <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" />
+    	<source-file src="src/android/gradle.properties" target-dir="../gradle.properties" />
+    	
+    	<!-- Appodeal SDK 3.3.0 - Updated for modern Android compatibility -->
+        <source-file src="libs/Android/appodeal-3.3.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/appodeal-banner-view-3.3.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/applovin-12.6.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/chartboost-9.7.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/inmobi-10.7.4.jar" target-dir="libs" />
+        <source-file src="libs/Android/ogury-5.6.0.jar" target-dir="libs" />
+        <source-file src="libs/Android/picasso-2.8.0.jar" target-dir="libs" />
         <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="libs" />
-        <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="libs" />
-    	<source-file src="libs/Android/startapp-3.6.7.jar" target-dir="libs" />
+        <source-file src="libs/Android/unity_ads-4.12.2.jar" target-dir="libs" />
+        <source-file src="libs/Android/yandex-metrica-6.4.0.jar" target-dir="libs" />
+    	<source-file src="libs/Android/startapp-4.11.5.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_alphab.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_appwallext.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_mvjscommon.jar" target-dir="libs" />
@@ -307,6 +319,20 @@
 		<framework src="libs/Android/mobvista_reward" custom="true" />
 		<framework src="libs/Android/mobvista_videocommon" custom="true" />
 		<framework src="libs/Android/mobvista_videofeeds" custom="true" />
+		
+		<!-- Network adapter build.gradle files -->
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="adcolony/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_appwall/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_common/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_interstitial/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvdownloads/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvnative/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_nativeex/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_offerwall/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_playercommon/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_reward/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videocommon/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videofeeds/build.gradle" />
     </platform>
 
     <platform name="ios">
