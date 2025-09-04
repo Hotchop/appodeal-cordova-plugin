@@ -321,18 +321,18 @@
 		<framework src="libs/Android/mobvista_videofeeds" custom="true" />
 		
 		<!-- Network adapter build.gradle files -->
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="adcolony/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_appwall/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_common/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_interstitial/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvdownloads/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvnative/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_nativeex/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_offerwall/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_playercommon/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_reward/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videocommon/build.gradle" />
-		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videofeeds/build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="adcolony" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_appwall" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_common" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_interstitial" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvdownloads" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_mvnative" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_nativeex" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_offerwall" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_playercommon" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_reward" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videocommon" target="build.gradle" />
+		<source-file src="src/android/network-adapter-build.gradle" target-dir="mobvista_videofeeds" target="build.gradle" />
     </platform>
 
     <platform name="ios">
