@@ -1,15 +1,65 @@
 // Modern dependency resolution strategy
 configurations.all {
     resolutionStrategy {
-        // Force consistent versions
-        force 'com.google.android.gms:play-services-ads:22.6.0'
+        // Force consistent versions for Google Play Services
+        force 'com.google.android.gms:play-services-ads:22.5.0'
+        force 'com.google.android.gms:play-services-basement:18.2.0'
+        force 'com.google.android.gms:play-services-base:18.2.0'
+        force 'com.google.android.gms:play-services-tasks:18.0.2'
+        force 'com.google.android.gms:play-services-location:21.0.1'
+        force 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+        force 'com.google.android.gms:play-services-appset:16.0.2'
+        force 'com.google.android.gms:play-services-cloud-messaging:17.0.0'
+        force 'com.google.android.gms:play-services-stats:17.0.2'
+        force 'com.google.android.gms:play-services-measurement-sdk-api:21.5.0'
+        force 'com.google.android.gms:play-services-cronet:18.0.1'
+        
         force 'androidx.legacy:legacy-support-v4:1.0.0'
         
         // Handle version conflicts
         eachDependency { details ->
             if (details.requested.group == 'com.google.android.gms') {
                 if (details.requested.name.startsWith('play-services-')) {
-                    details.useVersion '22.6.0'
+                    // Use specific stable versions instead of forcing 22.6.0
+                    switch (details.requested.name) {
+                        case 'play-services-ads':
+                        case 'play-services-ads-lite':
+                            details.useVersion '22.5.0'
+                            break
+                        case 'play-services-basement':
+                            details.useVersion '18.2.0'
+                            break
+                        case 'play-services-base':
+                            details.useVersion '18.2.0'
+                            break
+                        case 'play-services-tasks':
+                            details.useVersion '18.0.2'
+                            break
+                        case 'play-services-location':
+                            details.useVersion '21.0.1'
+                            break
+                        case 'play-services-ads-identifier':
+                            details.useVersion '18.0.1'
+                            break
+                        case 'play-services-appset':
+                            details.useVersion '16.0.2'
+                            break
+                        case 'play-services-cloud-messaging':
+                            details.useVersion '17.0.0'
+                            break
+                        case 'play-services-stats':
+                            details.useVersion '17.0.2'
+                            break
+                        case 'play-services-measurement-sdk-api':
+                            details.useVersion '21.5.0'
+                            break
+                        case 'play-services-cronet':
+                            details.useVersion '18.0.1'
+                            break
+                        default:
+                            // For other play-services libraries, use a conservative version
+                            details.useVersion '18.0.1'
+                    }
                 }
             }
             
