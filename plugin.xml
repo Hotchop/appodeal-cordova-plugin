@@ -103,7 +103,7 @@
 			<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 			<!--suppress AndroidDomInspection -->
 			<service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
-			<receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+			<receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" android:exported="false" >
 				<intent-filter>
 					<action android:name="android.intent.action.BOOT_COMPLETED" />
 				</intent-filter>
@@ -226,10 +226,12 @@
 				android:hardwareAccelerated="true" />
 			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize"
-				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
+				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				xmlns:tools="http://schemas.android.com/tools" tools:replace="android:theme" />
 			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize"
-				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" />
+				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				xmlns:tools="http://schemas.android.com/tools" tools:replace="android:theme" />
 
 			<!--suppress AndroidDomInspection -->
 			<activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize"
@@ -253,13 +255,13 @@
 				</intent-filter>
 			</service>
 			<activity android:name="io.presage.activities.PresageActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+				android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="true">
 				<intent-filter>
 					<action android:name="io.presage.intent.action.LAUNCH_WEBVIEW" />
 					<category android:name="android.intent.category.DEFAULT" />
 				</intent-filter>
 			</activity>
-			<receiver android:name="io.presage.receiver.NetworkChangeReceiver">
+			<receiver android:name="io.presage.receiver.NetworkChangeReceiver" android:exported="false">
 				<intent-filter>
 					<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
 					<action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
@@ -295,13 +297,17 @@
     	<!-- Appodeal SDK 2.1.11 - Working version (matches actual JAR files) -->
         <source-file src="libs/Android/appodeal-2.1.11.jar" target-dir="libs" />
         <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" />
+        <!-- Remove applovin JAR to avoid conflicts with newer AAR versions -->
+        <!-- <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" /> -->
         <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
-        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
+        <!-- Remove inmobi JAR to avoid conflicts with newer AAR versions -->
+        <!-- <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" /> -->
         <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="libs" />
-        <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" />
+        <!-- Remove picasso JAR to avoid conflicts with newer AAR versions -->
+        <!-- <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" /> -->
         <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="libs" />
-        <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" />
+        <!-- Remove unity ads JAR to avoid conflicts with newer AAR versions -->
+        <!-- <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" /> -->
         <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="libs" />
     	<source-file src="libs/Android/startapp-3.6.7.jar" target-dir="libs" />
 		<source-file src="libs/Android/mobvista_alphab.jar" target-dir="libs" />

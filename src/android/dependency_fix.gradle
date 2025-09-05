@@ -1,3 +1,15 @@
+// Add required repositories
+repositories {
+    google()
+    mavenCentral()
+    // InMobi Maven repository
+    maven { url "https://android-sdk.is.com/" }
+    // Unity Ads repository
+    maven { url "https://artifactory.unity3d.com/unity" }
+    // AppLovin repository 
+    maven { url "https://artifacts.applovin.com/android" }
+}
+
 // Modern dependency resolution strategy
 configurations.all {
     resolutionStrategy {
@@ -66,6 +78,38 @@ configurations.all {
                 }
             }
             
+            // Handle AppLovin versions - prefer newer versions but keep compatible
+            if (details.requested.group == 'com.applovin') {
+                if (details.requested.name == 'applovin-sdk') {
+                    // Use a compatible but not too new version
+                    details.useVersion '11.11.3'
+                }
+            }
+            
+            // Handle InMobi versions 
+            if (details.requested.group == 'com.inmobi.monetization') {
+                if (details.requested.name == 'inmobi-ads-kotlin' || details.requested.name == 'inmobi-ads') {
+                    // Use the actual version that mediation adapters expect
+                    details.useVersion '10.8.7'
+                }
+            }
+            
+            // Handle Picasso versions
+            if (details.requested.group == 'com.squareup.picasso') {
+                if (details.requested.name == 'picasso') {
+                    // Use older compatible version
+                    details.useVersion '2.8'
+                }
+            }
+            
+            // Handle Unity Ads versions
+            if (details.requested.group == 'com.unity3d.ads') {
+                if (details.requested.name == 'unity-ads') {
+                    // Use a compatible version that works with older Appodeal SDKs
+                    details.useVersion '4.4.1'
+                }
+            }
+            
             if (details.requested.group == 'com.android.support') {
                 // Migrate to AndroidX
                 if (details.requested.name == 'support-v4') {
@@ -74,4 +118,13 @@ configurations.all {
             }
         }
     }
+}
+
+// Add required dependencies that were removed as JARs
+dependencies {
+    // Add modern versions of libraries that were removed as JARs
+    implementation 'com.applovin:applovin-sdk:11.11.3'
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:10.8.7'  
+    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.unity3d.ads:unity-ads:4.4.1'
 }
