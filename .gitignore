@@ -1,0 +1,43 @@
+# Gradle build cache directories
+**/.gradle/
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.metadata/
+.settings/
+.project
+.classpath
+bin/
+tmp/
+
+# Build outputs
+build/
+out/
+platforms/android/build/
+platforms/android/app/build/
+platforms/android/CordovaLib/build/
+
+# Node modules (if any)
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cordova
+platforms/
+plugins/
+
+# Logs
+*.log
+npm-debug.log*
