@@ -280,6 +280,13 @@
 		<framework src="com.google.android.gms:play-services-location:21.0.1" />
 		<framework src="com.google.android.gms:play-services-basement:18.2.0" />
 		
+		<!-- Google Play Services Measurement Dependencies - Required for ads SDK -->
+		<framework src="com.google.android.gms:play-services-measurement-api:21.5.0" />
+		<framework src="com.google.android.gms:play-services-measurement-sdk-api:21.5.0" />
+		<framework src="com.google.android.gms:play-services-measurement-impl:21.5.0" />
+		<framework src="com.google.android.gms:play-services-measurement-base:21.5.0" />
+		<framework src="com.google.android.gms:play-services-measurement-sdk:21.5.0" />
+		
 		<!-- AndroidX Dependencies -->
 		<framework src="androidx.legacy:legacy-support-v4:1.0.0" />
 		<framework src="androidx.appcompat:appcompat:1.6.1" />
