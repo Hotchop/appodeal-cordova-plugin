@@ -277,6 +277,8 @@
         </config-file>
         
         <framework src="com.google.android.gms:play-services-ads:22.6.0" />
+        <framework src="com.google.android.gms:play-services-ads-lite:22.6.0" />
+        <framework src="com.google.android.gms:play-services-ads-base:22.6.0" />
 		<framework src="com.google.android.gms:play-services-location:21.0.1" />
 		<framework src="com.google.android.gms:play-services-basement:18.2.0" />
 		

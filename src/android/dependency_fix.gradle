@@ -37,6 +37,18 @@ configurations.all {
         
         force 'androidx.legacy:legacy-support-v4:1.0.0'
         
+        // Force all critical Google Play Services dependencies to prevent version conflicts
+        forcedModules = [
+            'com.google.android.gms:play-services-ads:22.6.0',
+            'com.google.android.gms:play-services-ads-lite:22.6.0',
+            'com.google.android.gms:play-services-ads-base:22.6.0',
+            'com.google.android.gms:play-services-measurement-api:21.5.0',
+            'com.google.android.gms:play-services-measurement-sdk-api:21.5.0',
+            'com.google.android.gms:play-services-measurement-impl:21.5.0',
+            'com.google.android.gms:play-services-measurement-base:21.5.0',
+            'com.google.android.gms:play-services-measurement-sdk:21.5.0'
+        ]
+        
         // Handle version conflicts
         eachDependency { details ->
             if (details.requested.group == 'com.google.android.gms') {
