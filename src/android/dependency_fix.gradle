@@ -112,8 +112,8 @@ configurations.all {
             // Handle InMobi versions 
             if (details.requested.group == 'com.inmobi.monetization') {
                 if (details.requested.name == 'inmobi-ads-kotlin' || details.requested.name == 'inmobi-ads') {
-                    // Use the actual version that mediation adapters expect
-                    details.useVersion '10.8.7'
+                    // Use version that still has the classic package structure
+                    details.useVersion '9.2.1'
                 }
             }
             
@@ -147,7 +147,10 @@ configurations.all {
 dependencies {
     // Add modern versions of libraries that were removed as JARs
     implementation 'com.applovin:applovin-sdk:11.11.3'
-    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:10.8.7'  
+    
+    // InMobi - temporarily use JAR instead of AAR to avoid missing classes
+    // implementation 'com.inmobi.monetization:inmobi-ads:9.2.1'
+    
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.unity3d.ads:unity-ads:4.4.1'
     

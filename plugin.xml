@@ -306,8 +306,8 @@
         <!-- Remove applovin JAR to avoid conflicts with newer AAR versions -->
         <!-- <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" /> -->
         <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
-        <!-- Remove inmobi JAR to avoid conflicts with newer AAR versions -->
-        <!-- <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" /> -->
+        <!-- Temporarily restore inmobi JAR until we find compatible AAR version -->
+        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
         <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="libs" />
         <!-- Remove picasso JAR to avoid conflicts with newer AAR versions -->
         <!-- <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" /> -->
